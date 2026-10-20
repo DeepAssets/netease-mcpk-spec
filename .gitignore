@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+build/
+dist/
+*.spec
+.mcpk_tool/
+.mcpk-stage-*
+*.mcpk
+*.report.json
+test-output/

@@ -1,0 +1,27 @@
+{
+  "application_author": "nmbb",
+  "version": "1.1.1",
+  "method": "Existing executable: PE resource update and frozen code-constant replacement",
+  "application_source_compiled": false,
+  "python_instruction_bytes_unchanged": true,
+  "python_code_objects_checked": 61,
+  "text_constants_replaced": 8,
+  "changed_pyz_modules": [
+    "backend",
+    "gui",
+    "name_hash"
+  ],
+  "pyz_module_count": 120,
+  "pyz_compressed_modules_preserved": 117,
+  "changed_package_members": [
+    "licenses\\RUNTIME_NOTICES.txt",
+    "PYZ.pyz"
+  ],
+  "package_member_count": 991,
+  "other_package_member_bytes_preserved": true,
+  "base_executable_sha256": "feafc270370e44210f773ad3b9828fd2304433ad7a1be5dbd0cad15c967257fc",
+  "output_sha256": "6b9c373ddf3674b3b1b25c065e7edeeaeff5acfaf7da6e676f43b2a5e56882d6",
+  "output_bytes": 11705611,
+  "base_executable_unchanged": true,
+  "game_runtime_verified": false
+}

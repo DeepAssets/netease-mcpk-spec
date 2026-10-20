@@ -1,0 +1,18 @@
+{
+  "author": "nmbb",
+  "version": "1.1.1",
+  "publication_date": "2026-10-20",
+  "python_version": "3.12.14",
+  "distribution_method": "Existing executable: PE resource update and frozen code-constant replacement",
+  "application_source_compiled": false,
+  "exe_sha256": "6b9c373ddf3674b3b1b25c065e7edeeaeff5acfaf7da6e676f43b2a5e56882d6",
+  "exe_bytes": 11705611,
+  "base_executable_sha256": "feafc270370e44210f773ad3b9828fd2304433ad7a1be5dbd0cad15c967257fc",
+  "sources": {
+    "backend.py": "742b893c93d29c16810346eab0abf304455453f9dc9cd26da192326c12591dc8",
+    "gui.py": "034cddfbc01578df91d52e57fd19374b97271753a5f53c636ed4343674046ba3",
+    "main.py": "43fdb5b883212425599623bf702983920b77a2602da41feae2b0e81c123fd0cd",
+    "name_hash.py": "3007c359c6c1f68591bb7d807c3d0fb13a08bdef9217c05c31945f23313e3948"
+  },
+  "source_hash_note": "SHA-256 over repository source bytes with LF line endings."
+}

@@ -1,0 +1,468 @@
+{
+  "version": "1.1.1",
+  "author": "nmbb",
+  "validation_date": "2026-10-20",
+  "platform": "Windows x64",
+  "python": "3.12.14",
+  "synthetic_unittest": {
+    "passed": 12,
+    "failed": 0,
+    "command": "python -m unittest discover -s tests -v"
+  },
+  "local_original_pack_regressions": {
+    "tool_version": "1.1.1",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "passed": 40,
+    "failed": 0,
+    "total": 40,
+    "tests": [
+      {
+        "name": "vanilla_trial_extract_all_35_bytes",
+        "passed": true,
+        "details": {
+          "files": 35,
+          "source_sha256": "a2680a0359b83d5a0ccb0a9df62b9181195f1487675ce806778b584e2d248986"
+        },
+        "seconds": 0.125
+      },
+      {
+        "name": "unchanged_roundtrip_exact_bytes_and_sha256",
+        "passed": true,
+        "details": {
+          "sha256": "a2680a0359b83d5a0ccb0a9df62b9181195f1487675ce806778b584e2d248986",
+          "byte_identical": true
+        },
+        "seconds": 0.094
+      },
+      {
+        "name": "manifest_size_grow",
+        "passed": true,
+        "details": {
+          "changed_file": "manifest.json",
+          "old_bytes": 548,
+          "new_bytes": 1355,
+          "unchanged_compressed_streams": 34,
+          "output_sha256": "cb0fbaef5ad2b5d054582f5759c20b941d4ea61fbf8644dfc3edf977c65a9ad2"
+        },
+        "seconds": 0.25
+      },
+      {
+        "name": "jpg_size_grow",
+        "passed": true,
+        "details": {
+          "changed_file": "textures/ui/tabbed_upsell_achievements.jpg",
+          "old_bytes": 68199,
+          "new_bytes": 69143,
+          "unchanged_compressed_streams": 34,
+          "output_sha256": "41e5ac3e2c0c8c6925b4f8c114d339a271f753c9abe5171e265b98b5cf5c9c7f"
+        },
+        "seconds": 0.25
+      },
+      {
+        "name": "jpg_size_shrink",
+        "passed": true,
+        "details": {
+          "changed_file": "textures/ui/tabbed_upsell_achievements.jpg",
+          "old_bytes": 68199,
+          "new_bytes": 4,
+          "unchanged_compressed_streams": 34,
+          "output_sha256": "9ccc56160c35f9f5449f6d9ad026ee958b3f22e86543747109fdc24f076facfa"
+        },
+        "seconds": 0.234
+      },
+      {
+        "name": "multiple_modified_stream_offsets",
+        "passed": true,
+        "details": {
+          "changed_files": [
+            "manifest.json",
+            "netease_config.json",
+            "textures/ui/tabbed_upsell_achievements.jpg"
+          ]
+        },
+        "seconds": 0.157
+      },
+      {
+        "name": "addition_refused",
+        "passed": true,
+        "details": {
+          "rejection": "原结构回封不支持新增、删除或改名。\n新增/改名：new.txt"
+        },
+        "seconds": 0.093
+      },
+      {
+        "name": "deletion_refused",
+        "passed": true,
+        "details": {
+          "rejection": "原结构回封不支持新增、删除或改名。\n缺少/改名：manifest.json"
+        },
+        "seconds": 0.078
+      },
+      {
+        "name": "rename_refused",
+        "passed": true,
+        "details": {
+          "rejection": "原结构回封不支持新增、删除或改名。\n缺少/改名：manifest.json\n新增/改名：manifest2.json"
+        },
+        "seconds": 0.079
+      },
+      {
+        "name": "contents_even_whitespace_change_refused",
+        "passed": true,
+        "details": {
+          "rejection": "contents.json 是原始文件索引，本版本要求保留原字节。请恢复该文件后重试。"
+        },
+        "seconds": 0.093
+      },
+      {
+        "name": "metadata_invalid_json_refused",
+        "passed": true,
+        "details": {
+          "rejection": "缺少有效的 .mcpk_tool/project.json。请先用本工具重新解包原文件。"
+        },
+        "seconds": 0.063
+      },
+      {
+        "name": "metadata_schema_change_refused",
+        "passed": true,
+        "details": {
+          "rejection": "不支持的工具元数据版本。"
+        },
+        "seconds": 0.047
+      },
+      {
+        "name": "metadata_source_hash_change_refused",
+        "passed": true,
+        "details": {
+          "rejection": "原包副本校验失败。请重新解包，不要修改工具元数据目录。"
+        },
+        "seconds": 0.078
+      },
+      {
+        "name": "metadata_original_bytes_corrupt_refused",
+        "passed": true,
+        "details": {
+          "rejection": "文件头不是 MCPK。本工具不支持 ZIP、BRARCHIVE 或加密资源包。"
+        },
+        "seconds": 0.047
+      },
+      {
+        "name": "existing_output_refused_and_preserved",
+        "passed": true,
+        "details": {
+          "rejection": "输出文件已存在。请选择新文件名，工具不会覆盖原包。"
+        },
+        "seconds": 0.0
+      },
+      {
+        "name": "existing_extraction_directory_refused_and_preserved",
+        "passed": true,
+        "details": {
+          "rejection": "输出目录已存在。请选择一个全新目录，避免覆盖文件。"
+        },
+        "seconds": 0.0
+      },
+      {
+        "name": "existing_report_refused_and_preserved",
+        "passed": true,
+        "details": {
+          "rejection": "同名封包报告已存在，请使用新文件名。"
+        },
+        "seconds": 0.0
+      },
+      {
+        "name": "output_inside_project_refused",
+        "passed": true,
+        "details": {
+          "rejection": "请把封包结果保存到解包目录外，避免混入资源文件。"
+        },
+        "seconds": 0.0
+      },
+      {
+        "name": "bad_zlib_checksum_refused_no_partial_output",
+        "passed": true,
+        "details": {
+          "rejection": "zlib 解压或校验失败，位置 0x4FE：Error -3 while decompressing data: incorrect data check"
+        },
+        "seconds": 0.015
+      },
+      {
+        "name": "filename_hash_mismatch_refused",
+        "passed": true,
+        "details": {
+          "rejection": "1 个文件无法通过索引及文件名哈希核对，例如：textures/ui/tabbed_upsell_achievements.jpg"
+        },
+        "seconds": 0.016
+      },
+      {
+        "name": "truncated_stream_refused",
+        "passed": true,
+        "details": {
+          "rejection": "压缩流不完整，位置 0x194115。"
+        },
+        "seconds": 0.016
+      },
+      {
+        "name": "invalid_data_offset_refused",
+        "passed": true,
+        "details": {
+          "rejection": "MCPK 数据区偏移无效，或表区超出支持范围。"
+        },
+        "seconds": 0.015
+      },
+      {
+        "name": "wrong_magic_refused",
+        "passed": true,
+        "details": {
+          "rejection": "文件头不是 MCPK。本工具不支持 ZIP、BRARCHIVE 或加密资源包。"
+        },
+        "seconds": 0.0
+      },
+      {
+        "name": "path_parent_traversal_refused",
+        "passed": true,
+        "details": {
+          "rejection": "封包包含 Windows 无法安全提取的路径：'../escape.txt'"
+        },
+        "seconds": 0.047
+      },
+      {
+        "name": "path_nested_traversal_refused",
+        "passed": true,
+        "details": {
+          "rejection": "封包包含 Windows 无法安全提取的路径：'folder/../../escape.txt'"
+        },
+        "seconds": 0.047
+      },
+      {
+        "name": "path_absolute_refused",
+        "passed": true,
+        "details": {
+          "rejection": "封包包含不安全路径：'/escape.txt'"
+        },
+        "seconds": 0.047
+      },
+      {
+        "name": "path_drive_absolute_refused",
+        "passed": true,
+        "details": {
+          "rejection": "封包包含 Windows 无法安全提取的路径：'C:/escape.txt'"
+        },
+        "seconds": 0.047
+      },
+      {
+        "name": "path_backslash_refused",
+        "passed": true,
+        "details": {
+          "rejection": "封包包含 Windows 无法安全提取的路径：'..\\\\escape.txt'"
+        },
+        "seconds": 0.047
+      },
+      {
+        "name": "path_reserved_con_refused",
+        "passed": true,
+        "details": {
+          "rejection": "封包包含 Windows 无法安全提取的路径：'CON.txt'"
+        },
+        "seconds": 0.046
+      },
+      {
+        "name": "path_reserved_aux_refused",
+        "passed": true,
+        "details": {
+          "rejection": "封包包含 Windows 无法安全提取的路径：'folder/aux.png'"
+        },
+        "seconds": 0.047
+      },
+      {
+        "name": "path_reserved_com1_refused",
+        "passed": true,
+        "details": {
+          "rejection": "封包包含 Windows 无法安全提取的路径：'COM1.txt'"
+        },
+        "seconds": 0.047
+      },
+      {
+        "name": "path_reserved_lpt9_refused",
+        "passed": true,
+        "details": {
+          "rejection": "封包包含 Windows 无法安全提取的路径：'lpt9.jpg'"
+        },
+        "seconds": 0.047
+      },
+      {
+        "name": "path_trailing_period_refused",
+        "passed": true,
+        "details": {
+          "rejection": "封包包含 Windows 无法安全提取的路径：'file.'"
+        },
+        "seconds": 0.047
+      },
+      {
+        "name": "path_trailing_space_refused",
+        "passed": true,
+        "details": {
+          "rejection": "封包包含 Windows 无法安全提取的路径：'file '"
+        },
+        "seconds": 0.031
+      },
+      {
+        "name": "path_ads_colon_refused",
+        "passed": true,
+        "details": {
+          "rejection": "封包包含 Windows 无法安全提取的路径：'file:stream'"
+        },
+        "seconds": 0.047
+      },
+      {
+        "name": "path_current_directory_refused",
+        "passed": true,
+        "details": {
+          "rejection": "封包包含不安全路径：'.'"
+        },
+        "seconds": 0.047
+      },
+      {
+        "name": "chemistry_331_member_layout_roundtrip",
+        "passed": true,
+        "details": {
+          "files": 331,
+          "data_offset": 5569,
+          "original_sha256": "10adeaa81f307704590188b02eb7117d0a494e32233279a2e1de5dbb71862f6a",
+          "unaligned_data_offset": true
+        },
+        "seconds": 0.891
+      },
+      {
+        "name": "chemistry_1_20_50_small_layout_roundtrip",
+        "passed": true,
+        "details": {
+          "files": 5,
+          "data_offset": 161,
+          "original_sha256": "d70a79c72a7ee77d796abc9f2c3959fc5eaadd7ecd414c1ed05df2e5cb1be6e3",
+          "unaligned_data_offset": true
+        },
+        "seconds": 0.031
+      },
+      {
+        "name": "ordinary_hidden_file_names_allowed",
+        "passed": true,
+        "details": {
+          "accepted": [
+            ".hidden",
+            "folder/.hidden",
+            ".hidden/file.txt"
+          ]
+        },
+        "seconds": 0.0
+      },
+      {
+        "name": "all_original_game_files_unchanged",
+        "passed": true,
+        "details": {
+          "source_sha256": {
+            "vanilla_trial": "a2680a0359b83d5a0ccb0a9df62b9181195f1487675ce806778b584e2d248986",
+            "chemistry": "10adeaa81f307704590188b02eb7117d0a494e32233279a2e1de5dbb71862f6a",
+            "chemistry_1.20.50": "d70a79c72a7ee77d796abc9f2c3959fc5eaadd7ecd414c1ed05df2e5cb1be6e3"
+          },
+          "all_originals_unchanged": true
+        },
+        "seconds": 0.0
+      }
+    ],
+    "scope": "Container and bytes only; no in-game compatibility or footer semantics claimed."
+  },
+  "frozen_executable_verification": {
+    "executable": "nmbb_MCPK解包封包工具.exe",
+    "exe_bytes": 11705611,
+    "exe_sha256": "6b9c373ddf3674b3b1b25c065e7edeeaeff5acfaf7da6e676f43b2a5e56882d6",
+    "passed": 7,
+    "failed": 0,
+    "author": "nmbb",
+    "frozen_gui_started": true,
+    "original_roundtrip_byte_identical": true,
+    "modified_roundtrip_bytes_verified": true,
+    "source_unchanged": true,
+    "game_runtime_verified": false,
+    "checks": [
+      {
+        "name": "frozen_gui_startup",
+        "ok": true,
+        "result": {
+          "ok": true,
+          "frozen_executable": true,
+          "author": "nmbb",
+          "version": "1.1.1",
+          "window_title": "nmbb · MCPK 解包封包工具",
+          "title_matches": true,
+          "tabs": [
+            "解包",
+            "封包"
+          ],
+          "tk_version": "8.6.12"
+        }
+      },
+      {
+        "name": "exe_unpack",
+        "ok": true,
+        "result": {
+          "ok": true,
+          "author": "nmbb",
+          "version": "1.1.1",
+          "file_count": 35
+        }
+      },
+      {
+        "name": "exe_repack_original",
+        "ok": true,
+        "result": {
+          "ok": true,
+          "author": "nmbb",
+          "version": "1.1.1",
+          "file_count": 35,
+          "changed_count": 0
+        }
+      },
+      {
+        "name": "exe_repack_modified",
+        "ok": true,
+        "result": {
+          "ok": true,
+          "author": "nmbb",
+          "version": "1.1.1",
+          "file_count": 35,
+          "changed_count": 1
+        }
+      },
+      {
+        "name": "exe_unpack_modified",
+        "ok": true,
+        "result": {
+          "ok": true,
+          "author": "nmbb",
+          "version": "1.1.1",
+          "file_count": 35
+        }
+      },
+      {
+        "name": "exe_refuses_existing_output",
+        "ok": true,
+        "result": {
+          "ok": false,
+          "error": "输出目录已存在。请选择一个全新目录，避免覆盖文件。"
+        }
+      },
+      {
+        "name": "exe_refuses_added_file",
+        "ok": true,
+        "result": {
+          "ok": false,
+          "error": "原结构回封不支持新增、删除或改名。\n新增/改名：新增文件.txt"
+        }
+      }
+    ]
+  },
+  "application_source_compiled": false,
+  "game_runtime_verified": false,
+  "note": "Existing frozen instruction bytes preserved; branding constants and native version resource changed. No game loading verification."
+}
